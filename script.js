@@ -43,7 +43,8 @@ function cityConditions(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#icons").innerHTML = response.data.condition.icon;
+  icons = response.data.condition.icon;
+  description: response.data.condition.description;
 }
 function searchCity(city) {
   let apiKey = "83f300145oa41d134baet569cb092ae8";
