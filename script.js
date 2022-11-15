@@ -30,13 +30,14 @@ document.querySelector("#nowDated").innerHTML = formatDate(currentTime);
 function cityConditions(response) {
   console.log(response.data);
 
-  document.querySelector("#cityHeadline").innerHTML = response.data.name;
+  document.querySelector("#cityHeadline").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
   document.querySelector("#percipitation").innerHTML = Math.round(
-    response.data.main.feels_like
+    response.data.temperature.feels_like
   );
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
