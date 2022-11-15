@@ -43,8 +43,8 @@ function cityConditions(response) {
   );
 }
 function searchCity(city) {
-  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
-  let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiKey = "83f300145oa41d134baet569cb092ae8";
+  let apiWeatherURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiWeatherURL).then(cityConditions);
 }
 function pinLocation(position) {
@@ -52,8 +52,8 @@ function pinLocation(position) {
   console.log(position.coords.longitude);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
+  let apiKey = "83f300145oa41d134baet569cb092ae8";
+  let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}`;
 
   axios.get(apiURL).then(cityConditions);
 }
