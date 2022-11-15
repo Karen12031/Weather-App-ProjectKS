@@ -28,8 +28,6 @@ let currentTime = new Date();
 document.querySelector("#nowDated").innerHTML = formatDate(currentTime);
 
 function cityConditions(response) {
-  console.log(response.data);
-
   document.querySelector("#cityHeadline").innerHTML = response.data.city;
 
   let temperatureElement = document.querySelector("#temperature");
@@ -46,9 +44,9 @@ function cityConditions(response) {
 
   document.querySelector("#icons").setAttribute = response.data.condition.icon;
 
-  document.querySelector("#description").innerHTML =
-    response.data.condition.description;
+  document.querySelector("#description")=response.data.condition.description;
 }
+
 function searchCity(city) {
   let apiKey = "83f300145oa41d134baet569cb092ae8";
   let apiWeatherURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
@@ -82,4 +80,4 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("click", citySubmit);
 
 let currentButton = document.querySelector("#pinLocations");
-currentButton.addEventListener("click", currentGeo);
+currentButton.addEventListener("click", pinLocation);
