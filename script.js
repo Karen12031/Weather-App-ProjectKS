@@ -46,7 +46,7 @@ function cityConditions(response) {
 }
 function searchCity(city) {
   let apiKey = "83f300145oa41d134baet569cb092ae8";
-  let apiWeatherURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}$units=imperial`;
+  let apiWeatherURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiWeatherURL).then(cityConditions);
 }
 function pinLocation(position) {
