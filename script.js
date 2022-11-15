@@ -46,11 +46,9 @@ function searchCity(city) {
 
   axios.get(apiWeatherURL).then(cityConditions);
 }
-function pinLocation(position) {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+function pinLocation(response) {
+  let latitude = response.coordinates.latitude;
+  let longitude = response.coordinates.longitude;
   let apiURL = `https://api.shecodes.io/weather/v1/?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
 
   axios.get(apiURL).then(cityConditions);
