@@ -33,13 +33,13 @@ function cityConditions(response) {
   document.querySelector("#cityHeadline").innerHTML = response.data.city;
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement = Math.round(response.data.temperature);
+  temperatureElement = Math.round(response.data.temperature.current);
 
   let humidityElement = document.querySelector("#humidity");
   humidityElement = Math.round(response.data.temperature.humidity);
 
-  let percipitationElement = document.querySelector("#percipitation");
-  percipitationElement = Math.round(response.data.temperature.feels_like);
+  let feelsElement = document.querySelector("#feelsLike");
+  feelsElement = Math.round(response.data.temperature.feels_like);
 
   let windElement = document.querySelector("#wind");
   windElement = Math.round(response.data.wind.speed);
