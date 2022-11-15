@@ -31,20 +31,23 @@ function cityConditions(response) {
   console.log(response.data);
 
   document.querySelector("#cityHeadline").innerHTML = response.data.city;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.temperature
-  );
-  document.querySelector("#humidity").innerHTML = Math.round(
-    response.data.temperature.humidity
-  );
-  document.querySelector("#percipitation").innerHTML = Math.round(
-    response.data.temperature.feels_like
-  );
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  icons = response.data.condition.icon;
-  description: response.data.condition.description;
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement = Math.round(response.data.temperature);
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement = Math.round(response.data.temperature.humidity);
+
+  let percipitationElement = document.querySelector("#percipitation");
+  percipitationElement = Math.round(response.data.temperature.feels_like);
+
+  let windElement = document.querySelector("#wind");
+  windElement = Math.round(response.data.wind.speed);
+
+  document.querySelector("#icons").setAttribute = response.data.condition.icon;
+
+  document.querySelector("#description").innerHTML =
+    response.data.condition.description;
 }
 function searchCity(city) {
   let apiKey = "83f300145oa41d134baet569cb092ae8";
