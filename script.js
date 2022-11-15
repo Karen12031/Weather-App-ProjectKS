@@ -31,22 +31,29 @@ function cityConditions(response) {
   console.log(response.data);
 
   document.querySelector("#cityHeadline").innerHTML = response.data.city;
-  document.querySelector("#temperature").innerHTML =
-    response.data.temperature.current;
-  document.querySelector("#humidity").innerHTML =
-    response.data.temperature.humidity;
-  document.querySelector("#percipitation").innerHTML =
-    response.data.temperature.feels_like;
-  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.temperature
+  );
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.temperature.humidity
+  );
+  document.querySelector("#percipitation").innerHTML = Math.round(
+    response.data.temperature.feels_like
+  );
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("icon").innerHTML = response.data.condition.icon;
 }
 function searchCity(city) {
-  const apiKey = "83f300145oa41d134baet569cb092ae8";
+  let apiKey = "83f300145oa41d134baet569cb092ae8";
   let apiWeatherURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   axios.get(apiWeatherURL).then(cityConditions);
 }
 function pinLocation(response) {
+  let apiKey = "83f300145oa41d134baet569cb092ae8";
+
   let latitude = response.coordinates.latitude;
   let longitude = response.coordinates.longitude;
   let apiURL = `https://api.shecodes.io/weather/v1/?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
