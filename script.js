@@ -44,8 +44,8 @@ function cityConditions(response) {
 
   document.querySelector("#icons").setAttribute = response.data.condition.icon;
 
-  let descriptionelement = document.querySelector("#description");
-  descriptionelement = response.data.condition.description;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement = response.data.condition;
 }
 
 function searchCity(city) {
@@ -57,9 +57,9 @@ function searchCity(city) {
 function pinLocation(response) {
   let apiKey = "83f300145oa41d134baet569cb092ae8";
 
-  let latitude = response.coordinates.latitude;
-  let longitude = response.coordinates.longitude;
-  let apiURL = `https://api.shecodes.io/weather/v1/?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=imperial`;
+  let lat = response.coordinates.latitude;
+  let long = response.coordinates.longitude;
+  let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${long}&lat=${lat}&key=${apiKey}&units=imperial`;
 
   axios.get(apiURL).then(cityConditions);
 }
