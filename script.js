@@ -59,7 +59,7 @@ function pinLocation(response) {
 
   let lat = response.coordinates.latitude;
   let long = response.coordinates.longitude;
-  let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${long}&lat=${lat}&key=${apiKey}&units=imperial`;
+  let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${long}&lat=${lat}&key=${apiKey}`;
 
   axios.get(apiURL).then(cityConditions);
 }
