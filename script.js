@@ -44,7 +44,8 @@ function cityConditions(response) {
 
   document.querySelector("#icons").setAttribute = response.data.condition.icon;
 
-  document.querySelector("#description")=response.data.condition.description;
+  let descriptionelement = document.querySelector("#description");
+  descriptionelement = response.data.condition.description;
 }
 
 function searchCity(city) {
