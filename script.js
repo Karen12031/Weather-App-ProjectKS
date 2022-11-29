@@ -42,7 +42,10 @@ function cityConditions(response) {
   let windElement = document.querySelector("#wind");
   windElement = Math.round(response.data.wind.speed);
 
-  document.querySelector("#icons").setAttribute = response.data.condition.icon;
+  let iconElement = document.querySelector("#icons");
+  iconElement.setAttribute =
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
