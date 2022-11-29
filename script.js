@@ -43,6 +43,9 @@ function cityConditions(response) {
   windElement = Math.round(response.data.wind.speed);
 
   document.querySelector("#icons").setAttribute = response.data.condition.icon;
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(city) {
