@@ -28,19 +28,22 @@ let currentTime = new Date();
 document.querySelector("#nowDated").innerHTML = formatDate(currentTime);
 
 function cityConditions(response) {
-  document.querySelector("#cityHeadline").innerHTML = response.data.city;
+  console.log(response.data);
+
+  let cityElement = document.querySelector("#cityHeadline");
+  cityElement.innerHTML = response.data.city;
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement = Math.round(response.data.temperature.humidity);
+  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
 
   let feelsElement = document.querySelector("#feelsLike");
-  feelsElement = Math.round(response.data.temperature.feels_like);
+  feelsElement.innerHTML = Math.round(response.data.temperature.feels_like);
 
   let windElement = document.querySelector("#wind");
-  windElement = Math.round(response.data.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let iconElement = document.querySelector("#icons");
   iconElement.setAttribute =
@@ -81,7 +84,24 @@ function citySubmit(event) {
 searchCity();
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("click", citySubmit);
+searchForm.addEventListener("submit", citySubmit);
 
 let currentButton = document.querySelector("#pinLocations");
-currentButton.addEventListener("click", pinLocation);
+currentButton.addEventListener("click", currentGeo);
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#farenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let celsiusTemperature = ((40 - 32.0) * 5.0) / 9.0;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
