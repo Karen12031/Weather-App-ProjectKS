@@ -50,6 +50,8 @@ function cityConditions(response) {
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 }
@@ -81,7 +83,7 @@ function citySubmit(event) {
   searchCity(city);
 }
 
-searchCity();
+searchCity("Charlotte");
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("click", citySubmit);
@@ -91,7 +93,13 @@ currentButton.addEventListener("click", currentGeo);
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+  let temperatureElement = document.querySelector("#temperature");
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#farenheit-link");
@@ -99,9 +107,14 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 function displayCelsius(event) {
   event.preventDefault();
-  let celsiusTemperature = ((40 - 32.0) * 5.0) / 9.0;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
+
+let celsiusTemperature = null;
