@@ -50,8 +50,8 @@ function cityConditions(response) {
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
-  let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
+  document.querySelector("#description").innerHTML =
+    response.data.weather.description;
 }
 
 function searchCity(city) {
@@ -61,8 +61,8 @@ function searchCity(city) {
   axios.get(apiWeatherURL).then(cityConditions);
 }
 function pinLocation(response) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+  let latitude = response.coords.latitude;
+  let longitude = response.coords.longitude;
 
   let apiKey = "c2b924a522e7431434cbf7706f4b901f";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
