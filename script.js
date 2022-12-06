@@ -31,16 +31,16 @@ function cityConditions(response) {
   console.log(response.data);
 
   let cityElement = document.querySelector("#cityHeadline");
-  cityElement.innerHTML = response.data.city;
+  cityElement.innerHTML = response.data.name;
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
 
   let feelsElement = document.querySelector("#feelsLike");
-  feelsElement.innerHTML = Math.round(response.data.temperature.feels_like);
+  feelsElement.innerHTML = Math.round(response.data.main.feels_like);
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -55,17 +55,17 @@ function cityConditions(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "83f300145oa41d134baet569cb092ae8";
-  let apiWeatherURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
+  let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiWeatherURL).then(cityConditions);
 }
 function pinLocation(response) {
-  let apiKey = "83f300145oa41d134baet569cb092ae8";
+  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
 
-  let lat = response.coordinates.latitude;
-  let long = response.coordinates.longitude;
-  let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${long}&lat=${lat}&key=${apiKey}`;
+  let lat = response.coord.lat;
+  let long = response.coord.lon;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiURL).then(cityConditions);
 }
