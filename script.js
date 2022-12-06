@@ -56,16 +56,16 @@ function cityConditions(response) {
 
 function searchCity(city) {
   let apiKey = "c2b924a522e7431434cbf7706f4b901f";
-  let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&units=imperial`;
+  let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiWeatherURL).then(cityConditions);
 }
 function pinLocation(response) {
-  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
 
-  let lat = response.coord.lat;
-  let long = response.coord.lon;
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
 
   axios.get(apiURL).then(cityConditions);
 }
@@ -84,7 +84,7 @@ function citySubmit(event) {
 searchCity();
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", citySubmit);
+searchForm.addEventListener("click", citySubmit);
 
 let currentButton = document.querySelector("#pinLocations");
 currentButton.addEventListener("click", currentGeo);
