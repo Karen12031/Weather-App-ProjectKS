@@ -53,7 +53,7 @@ function cityConditions(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+    response.data.weather.description;
 }
 
 function searchCity(city) {
