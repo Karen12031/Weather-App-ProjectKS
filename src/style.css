@@ -1,8 +1,8 @@
 body {
   font-family: "Zen Old Mincho", ui-rounded;
-  margin: 60px 0px;
-  padding: 15px 0px;
-  background: linear-gradient
+  margin: 40px;
+  padding: 15px;
+  background-color: linear-gradient
     (
       132deg,
       rgb(157, 153, 64) 14%,
@@ -64,6 +64,7 @@ li {
 
 .end {
   text-align: center;
+  text-decoration: wavy;
 }
 
 .open {
@@ -72,5 +73,7 @@ li {
 
 .connection {
   text-align: center;
+  font-family: "Zen Old Mincho Black", ui-rounded;
+  font-weight: bold;
   color: #8a8635;
 }
