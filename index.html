@@ -59,7 +59,7 @@
 			</h1>
 			<ul>
 				<li>
-					<span style="padding: 0.5em;">
+					<span id="weatherIcon" style="padding: 0.5em;">
 						<i class="fa-regular fa-clock fa-lg fa-fw"></i>
 					</span>
 					<span id = "nowDated">
@@ -67,13 +67,8 @@
 					</span>
 				</li>
 				<li>
-				<span id="description">
-					Sunny
-				</span>
-			</li>
-				<li>
-					<span style="padding: 0.5em;">
-						<i class="fa-solid fa-hand-point-up"></i>
+					<span id="weatherIcon"  style="padding: 0.5em;">
+						<i class="fa-solid fa-lg fa-hand-point-up"></i>
 					</span>
 				Feels like:
 				<span id="feelsLike">
@@ -90,8 +85,7 @@
 				<span id= "humidity"> 
 					<strong>
 						12
-					</span>
-					% </strong>
+				</span>%</strong>
 			</li>
 			<li>
 			<span id = "weatherIcon">
@@ -107,10 +101,11 @@
 			</li>
 			</ul>
 			</div>
+			<br>
 			<div class="col-lg-4 col-md-4 col-sm-6">
 			<div class="temperature-container d-flex justify-content-end">
-				<div id="main-Icon">
-					<span style="padding: 0.5em;">
+				<div id="mainWeather">
+					<span id="mainIcon" style="padding: 0.5em;">
 						<i class="fa-solid fa-temperature-three-quarters fa-3x fa-fw"></i>
 					</span>
 				</div>
@@ -118,6 +113,11 @@
 				<a href="#" id="farenheit-link">F</a>
 						|
 			    <a href="#" id="celsius-link">C</a>
+				<li>
+					<span id="description">
+						Sunny
+					</span>
+				</li>
 			</div>
 		</div>
 	</div>

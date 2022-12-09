@@ -1,34 +1,42 @@
-.body {
-  font-family: Arial, sans-serif;
+body {
+  font-family: "Zen Old Mincho", ui-rounded;
   margin: 60px 0px;
   padding: 15px 0px;
-}
-body {
-  font-family: arial, sans-serif;
+  background: linear-gradient
+    (
+      132deg,
+      rgb(157, 153, 64) 14%,
+      rgb(157, 151, 71) 27%,
+      rgb(186, 72, 31) 50%,
+      rgb(220, 102, 36) 73%,
+      rgb(233, 200, 145) 100%
+    );
 }
 
-cityHeadline {
-  color: #23bd68;
-  font-size: 24px;
+#cityHeadline {
+  color: #8a8635;
+  font-size: 30px;
   font-weight: 100;
   line-height: 28px;
   margin: 0;
+  padding: 20px;
   text-align: justify;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Zen Old Mincho Black", ui-rounded;
   text-align: left;
 }
 
-ul {
-  margin: 0 0 10px;
-  padding: 0;
+#weatherIcon {
+  padding: 5px;
+  margin: 2.5px;
+  color: #350b40;
+  align-content: center;
 }
 
 li {
-  color: #7c7c7c;
-  font-size: 16px;
+  color: #ae431e;
+  font-size: 20px;
   font-weight: 100;
   height: 19px;
-  line-height: 1;
   list-style: none;
   padding: 15px;
   margin: 10px;
@@ -41,14 +49,10 @@ li {
   line-height: 1;
 }
 
-.units {
-  position: relative;
-  top: -34px;
-}
-
-.search-form {
-  margin-bottom: 20px;
-  color: #23bd68;
+#search-form {
+  border-color: #e9c891;
+  margin: 15px;
+  padding: 10px;
 }
 .dailyForecast {
   text-align: left;
@@ -57,15 +61,16 @@ li {
   color: #35abb6;
   margin: 50px;
 }
+
+.end {
+  text-align: center;
+}
+
 .open {
   color: rgb(119, 119, 119);
 }
 
 .connection {
   text-align: center;
-  color: #39cc85;
-}
-
-.end {
-  text-align: center;
+  color: #8a8635;
 }
