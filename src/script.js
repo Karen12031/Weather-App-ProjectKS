@@ -45,15 +45,14 @@ function cityConditions(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let iconElement = document.querySelector("#icons");
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#main-Icon");
   iconElement.setAttribute =
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  document.querySelector("#description").innerHTML =
-    response.data.weather.description;
 }
 
 function searchCity(city) {
