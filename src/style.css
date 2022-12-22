@@ -59,11 +59,11 @@ li {
   padding: 10px;
 }
 
-#temperature-container .active {
+.temperature-container .active {
   color: #350b40;
   cursor: default;
 }
-#temperature-container .active:hover {
+.temperature-container .active:hover {
   text-decoration: none;
 }
 .dailyForecast {
