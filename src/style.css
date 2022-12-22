@@ -47,11 +47,16 @@ h1 {
 
 #buttonSearch {
   margin: 2.5px;
+  color: (220, 102, 36);
   border-radius: 20px;
   border-color: #8a8635;
   padding-left: 30%;
   border-width: 0.25em;
   align-content: center;
+}
+
+#buttonSearch cursor:hover {
+  color: #e9c891;
 }
 
 #pinLocations {
