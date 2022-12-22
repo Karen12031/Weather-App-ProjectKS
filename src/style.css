@@ -42,6 +42,17 @@ body {
   text-decoration-color: #350b40;
 }
 
+#weatherIcon {
+  margin: 2.5px;
+  color: #350b40;
+  align-content: center;
+}
+
+#pinbeat {
+  padding: 15px 5px 15px 15px;
+  align-items: center;
+}
+
 li {
   color: #ae431e;
   font-size: 20px;
