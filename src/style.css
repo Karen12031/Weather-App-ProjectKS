@@ -19,6 +19,7 @@ body {
 }
 
 h1 {
+  align-items: center;
 }
 #cityHeadline {
   color: #8a8635;
@@ -27,6 +28,10 @@ h1 {
   line-height: 28px;
   text-align: justify;
   font-family: "Zen Old Mincho Black", ui-rounded;
+}
+
+#pinbeat {
+  padding: 0px 0px 0px 30px;
 }
 
 #searching {
@@ -46,11 +51,6 @@ h1 {
   margin: 2.5px;
   color: #350b40;
   align-content: center;
-}
-
-#pinbeat {
-  padding: 5px 5px 5px 30px;
-  align-items: center;
 }
 
 li {
