@@ -53,6 +53,8 @@ function cityConditions(response) {
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let fahrenheiTemperature = Math.round(response.data.main.temp);
 }
 
 function searchCity(city) {
@@ -84,20 +86,13 @@ function citySubmit(event) {
 
 searchCity("Charlotte");
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("click", citySubmit);
-
-let currentButton = document.querySelector("#pinLocations");
-currentButton.addEventListener("click", currentGeo);
-
 function displayFahrenheit(event) {
   event.preventDefault();
 
-  let temperatureElement = document.querySelector("#temperature");
   fahrenheitLink.classList.add("active");
   celsiusLink.classList.remove("active");
 
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
@@ -110,10 +105,17 @@ function displayCelsius(event) {
   fahrenheitLink.classList.remove("active");
 
   let temperatureElement = document.querySelector("#temperature");
+  let celsiusTemperature = (fahrenheiTemperature - 32) / 1.8;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
-let celsiusTemperature = null;
+let fahrenheiTemperature = null;
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("click", citySubmit);
+
+let currentButton = document.querySelector("#pinLocations");
+currentButton.addEventListener("click", currentGeo);
