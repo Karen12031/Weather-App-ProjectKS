@@ -13,7 +13,7 @@ body {
     );
 }
 
-#search-form #buttonSearch #pinLocations {
+#buttonSearch #pinLocations {
   border-radius: 20px;
   text-align: center;
 }
@@ -29,9 +29,10 @@ body {
   font-family: "Zen Old Mincho Black", ui-rounded;
 }
 
-#pinbeat {
+#searching {
   margin: 2.5px;
-  color: #350b40;
+  border-radius: 20px;
+  text-decoration-color: #350b40;
   align-content: center;
 }
 
