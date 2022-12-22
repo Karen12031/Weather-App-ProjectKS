@@ -29,8 +29,13 @@ body {
   font-family: "Zen Old Mincho Black", ui-rounded;
 }
 
+#pinbeat {
+  margin: 2.5px;
+  color: #350b40;
+  align-content: center;
+}
+
 #weatherIcon {
-  padding: 5px;
   margin: 2.5px;
   color: #350b40;
   align-content: center;
@@ -59,12 +64,16 @@ li {
   padding: 10px;
 }
 
+.temperature-container {
+  color: rgb(233, 200, 145);
+}
 .temperature-container .active {
   color: #350b40;
   cursor: default;
 }
 .temperature-container .active:hover {
   text-decoration: none;
+  color: #350b40;
 }
 .dailyForecast {
   text-align: left;
