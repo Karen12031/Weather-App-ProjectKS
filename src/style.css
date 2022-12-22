@@ -23,8 +23,8 @@ h1 {
   padding-bottom: 40px;
 }
 #cityHeadline {
-  color: #8a8635;
-  font-size: 30px;
+  color: #350b40;
+  font-size: 45px;
   font-weight: 100;
   line-height: 28px;
   text-align: justify;
@@ -33,6 +33,7 @@ h1 {
 
 #pinbeat {
   padding: 0px 0px 0px 30px;
+  color: #8a8635;
 }
 
 #searching {
