@@ -54,7 +54,7 @@ function cityConditions(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  let fahrenheiTemperature = Math.round(response.data.main.temp);
+  fahrenheiTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -83,8 +83,6 @@ function citySubmit(event) {
   let city = document.querySelector("#searching").value;
   searchCity(city);
 }
-
-searchCity("Charlotte");
 
 function displayFahrenheit(event) {
   event.preventDefault();
@@ -119,3 +117,5 @@ searchForm.addEventListener("click", citySubmit);
 
 let currentButton = document.querySelector("#pinLocations");
 currentButton.addEventListener("click", currentGeo);
+
+searchCity("Charlotte");
