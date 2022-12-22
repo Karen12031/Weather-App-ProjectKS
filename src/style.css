@@ -13,11 +13,6 @@ body {
     );
 }
 
-#buttonSearch #pinLocations {
-  border-radius: 20px;
-  text-align: center;
-}
-
 h1 {
   align-items: center;
   padding-bottom: 40px;
@@ -45,12 +40,30 @@ h1 {
   align-content: center;
 }
 
-#searching .active {
+#searching :active {
   border-color: #8a8635;
   text-decoration-color: #350b40;
 }
 
-#weatherIcon {
+#buttonSearch {
+  margin: 2.5px;
+  border-radius: 20px;
+  border-color: #8a8635;
+  padding-left: 30%;
+  border-width: 0.25em;
+  align-content: center;
+}
+
+#pinLocations {
+  margin: 2.5px;
+  border-radius: 20px;
+  border-color: #8a8635;
+  padding-left: 30%;
+  border-width: 0.25em;
+  align-content: center;
+}
+
+#searching #weatherIcon {
   margin: 2.5px;
   color: #350b40;
   align-content: center;
