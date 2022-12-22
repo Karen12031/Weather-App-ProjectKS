@@ -14,8 +14,8 @@ body {
 }
 
 #search-form #buttonSearch #pinLocations {
-  border: 10px solid #f1d75d;
   border-radius: 20px;
+  text-align: center;
 }
 
 #cityHeadline {
