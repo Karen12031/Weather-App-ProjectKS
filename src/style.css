@@ -55,7 +55,7 @@ h1 {
   text-align: center;
 }
 
-#buttonSearch cursor:hover {
+#buttonSearch :hover {
   color: #e9c891;
 }
 
