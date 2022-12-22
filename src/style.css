@@ -32,6 +32,7 @@ body {
 #searching {
   margin: 2.5px;
   border-radius: 20px;
+  border-color: #e9c891;
   text-decoration-color: #350b40;
   align-content: center;
 }
