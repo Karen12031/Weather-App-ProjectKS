@@ -60,6 +60,10 @@ function displayForecast() {
 let currentTime = new Date();
 document.querySelector("#nowDated").innerHTML = formatDate(currentTime);
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
+
 function cityConditions(response) {
   console.log(response.data);
 
@@ -89,6 +93,8 @@ function cityConditions(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   let fahrenheiTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
