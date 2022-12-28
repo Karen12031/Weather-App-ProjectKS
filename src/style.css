@@ -108,11 +108,24 @@ li {
   color: #350b40;
 }
 .dailyForecast {
-  text-align: left;
-  font-size: 23px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dailyForecast-date {
+  font-size: 16px;
   font-weight: 150;
+  opacity: 0.5;
   color: #35abb6;
-  margin: 50px;
+}
+
+.dailyForecast-temperature-min {
+  opacity: 0.5;
+}
+
+.dailyForecast-temperature {
+  font-size: 13px;
+  color: #350b40;
 }
 
 .end {
