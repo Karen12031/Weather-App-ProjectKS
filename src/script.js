@@ -48,15 +48,14 @@ function displayForecast() {
 						12
 					</span>
 				</div>
-			</div>
-		</div>
-  `;
+      </div>
+    `;
 
   forecastHTML =
     forecastHTML +
     `
-			<div class="col-2">
-				<div class="dailyForecast-date">
+    <div class="col-2">
+      <div class="dailyForecast-date">
 					Friday
 				</div>
 				<img
@@ -72,7 +71,6 @@ function displayForecast() {
 						12
 					</span>
 				</div>
-			</div>
 		</div>
   `;
 
