@@ -24,6 +24,33 @@ function formatDate(date) {
   return `${day}, ${hours}:${min}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("forecast");
+
+  forecastElement.innerHTML = `
+  <div class="row">
+			<div class="col-2">
+				<div class="dailyForecast-date">
+					Friday
+				</div>
+				<img
+				src="http://openweathermap.org/img/wn/50d@2x.png"
+				alt=""
+				width="42"
+				/>
+				<div class="dailyForecast-temperature">
+					<span class="dailyForecast-temperature-max">
+						18 	
+					</span>
+					<span class="dailyForecast-temperature-min">
+						12
+					</span>
+				</div>
+			</div>
+		</div>
+  `;
+}
+
 let currentTime = new Date();
 document.querySelector("#nowDated").innerHTML = formatDate(currentTime);
 
@@ -123,3 +150,4 @@ let currentButton = document.querySelector("#pinLocations");
 currentButton.addEventListener("click", currentGeo);
 
 searchCity("Charlotte");
+displayForecast();
