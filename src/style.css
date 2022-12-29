@@ -64,7 +64,7 @@ h1 {
   left: 7px;
   height: 100%;
   background-color: #e9c891;
-  z-index: -1;
+  z-index: 1;
   transition: all 0.35s;
   border-radius: inherit;
   align-content: center;
@@ -145,7 +145,8 @@ li:first-letter {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  position: relative;
+  max-width: 800px;
   margin: 30px auto;
 }
 
