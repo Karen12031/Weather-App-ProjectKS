@@ -47,16 +47,27 @@ h1 {
 
 #buttonSearch {
   margin: 2.5px;
-  color: (220, 102, 36);
-  border-radius: 20px;
-  border-color: #8a8635;
-  padding-left: 30%;
-  border-width: 0.25em;
+  height: 40px;
+  padding: 12px 20px;
+  background-color: transparent;
+  font-weight: 600;
+  outline: none;
+  border-radius: 5px;
+  border: 1px #8a8635;
   text-align: center;
 }
 
-#buttonSearch :hover {
-  color: #e9c891;
+#buttonSearch:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 7px;
+  left: 7px;
+  height: 100%;
+  background-color: #e9c891;
+  z-index: -1;
+  transition: all 0.35s;
+  border-radius: inherit;
 }
 
 #pinLocations {
