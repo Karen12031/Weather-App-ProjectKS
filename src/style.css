@@ -151,8 +151,16 @@ li:first-letter {
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid #350b40;
+  padding: 10px 50px 20px;
+  border: 10px linear-gradient
+    (
+      132deg,
+      rgb(157, 153, 64) 14%,
+      rgb(157, 151, 71) 27%,
+      rgb(186, 72, 31) 50%,
+      rgb(220, 102, 36) 73%,
+      rgb(233, 200, 145) 100%
+    );
   border-radius: 5px;
 }
 
