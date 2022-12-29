@@ -52,11 +52,15 @@ body {
 
 #buttonSearch {
   margin: 2.5px;
+  font-weight: 600;
+  height: 40px;
   border-radius: 20px;
+  border: 10px;
   border-color: #8a8635;
+  background-color: (233, 200, 145);
   padding-left: 30%;
   border-width: 0.25em;
-  align-content: center;
+  text-align: center;
 }
 
 #buttonSearch:after {
@@ -65,7 +69,7 @@ body {
   top: 7px;
   left: 7px;
   height: 100%;
-  background-color: #e9c891;
+  background-color: #350b40;
   z-index: 1;
   transition: all 0.35s;
   border-radius: inherit;
@@ -73,12 +77,8 @@ body {
 }
 
 #buttonSearch:hover:after {
-  margin: 2.5px;
-  border-radius: 20px;
-  border-color: #8a8635;
-  padding-left: 30%;
-  border-width: 0.25em;
-  align-content: center;
+  top: 0px;
+  left: 0px;
 }
 
 #weatherIcon {
@@ -126,7 +126,7 @@ li {
 
   color: #97670e;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: bolder;
   line-height: 19px;
   align-items: center;
 }
@@ -143,15 +143,6 @@ li:first-letter {
 }
 
 .weather-app {
-  border-color: linear-gradient
-    (
-      132deg,
-      rgb(157, 153, 64) 14%,
-      rgb(157, 151, 71) 27%,
-      rgb(186, 72, 31) 50%,
-      rgb(220, 102, 36) 73%,
-      rgb(233, 200, 145) 100%
-    );
   border: 10px;
   border-radius: 10px;
 }
