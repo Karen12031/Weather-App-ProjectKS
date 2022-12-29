@@ -2,6 +2,11 @@ body {
   font-family: "Zen Old Mincho", ui-rounded;
   margin: 40px;
   padding: 15px;
+}
+
+body {
+  background-size: cover;
+
   background-color: linear-gradient
     (
       132deg,
@@ -13,16 +18,15 @@ body {
     );
 }
 
-h1 {
-  align-items: center;
-  padding-bottom: 40px;
+#city {
+  text-align: left;
+  padding-bottom: 10px;
 }
 #cityHeadline {
   color: #350b40;
   font-size: 45px;
   font-weight: 100;
   line-height: 28px;
-  text-align: justify;
   font-family: "Zen Old Mincho Black", ui-rounded;
 }
 
@@ -35,6 +39,7 @@ h1 {
   margin: 2.5px;
   border-radius: 20px;
   border-color: #8a8635;
+  color: #350b40;
   padding-left: 30%;
   border-width: 0.25em;
   align-content: center;
@@ -46,14 +51,11 @@ h1 {
 }
 
 #buttonSearch {
-  font-weight: 600;
-  height: 40px;
-  padding: 12px 20px;
-  outline: none;
-  border: 1px;
+  margin: 2.5px;
+  border-radius: 20px;
   border-color: #8a8635;
-  background-color: orange;
-  border-radius: 5px;
+  padding-left: 30%;
+  border-width: 0.25em;
   align-content: center;
 }
 
@@ -79,29 +81,17 @@ h1 {
   align-content: center;
 }
 
-#searching {
-  margin: 2.5px;
-  color: #350b40;
-  align-content: center;
-}
-
 #weatherIcon {
   margin: 2.5px;
   color: #350b40;
-  align-content: center;
 }
 
 .temperature {
   color: #350b40;
-  font-size: 55px;
+  font-size: 45px;
   font-weight: bolder;
 }
 
-#search-form {
-  border-color: #e9c891;
-  margin: 15px;
-  padding: 10px;
-}
 h3 {
   text-align: center;
   color: #350b40;
@@ -138,6 +128,7 @@ li {
   font-size: 18px;
   font-weight: 100;
   line-height: 19px;
+  align-items: center;
 }
 
 li:first-letter {
@@ -146,7 +137,7 @@ li:first-letter {
 
 .weather-app-wrapper {
   position: relative;
-  max-width: 800px;
+  max-width: 600px;
   margin: 30px auto;
   padding: 10px 50px 20px;
 }
