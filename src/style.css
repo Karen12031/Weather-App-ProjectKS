@@ -42,15 +42,17 @@ body {
   color: #350b40;
   padding-left: 30%;
   border-width: 0.25em;
-  align-content: center;
+  text-align: center;
 }
 
 #searching:hover:after {
+  cursor: pointer;
   border-color: #8a8635;
   text-decoration-color: #350b40;
 }
 
 #buttonSearch {
+  cursor: pointer;
   margin: 2.5px;
   font-weight: 600;
   height: 40px;
@@ -64,6 +66,7 @@ body {
 }
 
 #buttonSearch:after {
+  cursor: pointer;
   position: absolute;
   width: 100%;
   top: 7px;
@@ -77,6 +80,39 @@ body {
 }
 
 #buttonSearch:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+#pinLocations {
+  cursor: pointer;
+  margin: 2.5px;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 20px;
+  border: 10px;
+  border-color: #8a8635;
+  background-color: (233, 200, 145);
+  padding-left: 30%;
+  border-width: 0.25em;
+  text-align: center;
+}
+
+#pinLocations:after {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  top: 7px;
+  left: 7px;
+  height: 100%;
+  background-color: #350b40;
+  z-index: 1;
+  transition: all 0.35s;
+  border-radius: inherit;
+  align-content: center;
+}
+
+#pinLocations:hover:after {
   top: 0px;
   left: 0px;
 }
