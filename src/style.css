@@ -70,7 +70,7 @@ h1 {
   border-radius: inherit;
 }
 
-#pinLocations {
+#button:hover:aft #pinLocations {
   margin: 2.5px;
   border-radius: 20px;
   border-color: #8a8635;
