@@ -13,11 +13,13 @@
 </head>
 <body>
 	<div class="container"> 
-		<div class="card">
-			<form id="search-form" id= "search-form">
+		<div class="weather-app-wrapper">
+			<div class="weather-app">
+			<form id="search-form" class="mb-3">
 				<div class="row">
 						<div class ="col-4">
-							<input type="search" 
+							<input
+							type="search" 
 							id="searching"
 							placeholder="Search location..."
 							autofocus="on"
@@ -45,12 +47,8 @@
 						</div>
 					</div>
 			 </form>
-			 <br>
 		<div class="WeatherInfo"> 
-			<div class="row">
-				<div class="col-6">
-			<br>
-			<h1>
+			<h1 id="city">
 				<span id="pinbeat">
 				<i class="fa-solid fa-location-dot fa-xs fa-fw fa-beat" style="--fa-animation-duration: 2s;"></i></span>
 				<span id="cityHeadline">Have a great day </span> 
@@ -66,65 +64,72 @@
 						<i class="fa-regular fa-clock fa-lg"></i>
 					</span>
 					<span id = "nowDated">
-						<strong>Saturday - 10:15 AM</strong>
+						Last Updated <strong>Saturday - 10:15 AM</strong>
 					</span>
 				</li>
-				<li>
-					<span id = "weatherIcon" style="padding: 5px;">
-						<i class="fa-regular fa-lg fa-hand-point-up"></i>
-					</span>
-				Feels like:
-				<span id="feelsLike">
-					<strong>0
-				</span>°</strong>
-			</li>
-			<li>
-			<span id = "weatherIcon" style="padding: 5px;">
-			
-				<i class="fa-regular fa-lg fa-droplet"></i>
-		
-			</span>
-				Humidity:
-				<span id= "humidity"> 
-					<strong>
-						12
-				</span>%</strong>
-			</li>
-			<li>
-			<span id = "weatherIcon" style="padding: 5px;">
-				<i class="fa-regular fa-lg fa-wind"></i>
-			</span>
-				Wind Speed:
-				<span id="wind"> <strong>
-					10
-				</span>
-				mph </strong>
-			</li>
-			</ul>
-			</div>
-			<div class="col-lg-6">
-				<div class="temperature-container d-flex justify-content-end">
-				 <div id="mainWeather">
-					<img 
-					src="" 
-					id="mainIcon" 
-					style="padding: 0.5em;"
-					/>
-					
-				 </div>
-				<span class="temperature" id="temperature">75</span>°
-				<a href="#" id="farenheitLinks" class="active">F</a>
-						|
-			    <a href="#" id="celsiusLinks">C</a>
-			</div>
+			</ul>	
+				<div class="row">
+					<div class="col-6">
+					  <div class="clearfix weather-temperature">
+							<div id="mainWeather">
+								<img
+								src="" 
+								id="mainIcon" 
+								class="float-left"
+								style="padding: 0.5em;"
+								/>
+							</div>
+						<div class="float-left">
+						 <span class="temperature" id="temperature">75</span>°
+						  <span class="units">
+							<a href="#" id="farenheitLinks" class="active">F</a>
+							|
+							<a href="#" id="celsiusLinks">C</a>
+						  </span>
+						</div>
+					  </div>
+					</div>
+				</div>
+			<div class="col-6">
+				<ul>
+					<li>
+						<span id = "weatherIcon" style="padding:5px;">
+							<i class="fa-regular fa-lg fa-hand-point-up"></i>
+						</span>
+						Feels like:
+						<span id="feelsLike">
+							<strong>0
+						</span>°
+						    </strong>
+					</li>
+					<li>
+						<span id = "weatherIcon" style="padding: 5px;">
+							<i class="fa-regular fa-lg fa-droplet"></i>
+						</span>
+						Humidity:
+						<span id= "humidity">
+							12
+						</span> %
+					</li>
+					<li>
+						<span id = "weatherIcon" style="padding:5px;">
+							<i class="fa-regular fa-lg fa-wind"></i>
+						</span>
+						Wind Speed:
+						<span id="wind">
+							10
+						</span>
+						mph
+					</li>
+				</ul>
 			</div>
 		</div>
-	</div> 
+		    </div>
 	<h3>
 		5 Day Forecast
 	</h3>
-	<div class="dailyForecast" id="forecast">
-	</div>
+	<div class="dailyForecast" id="forecast"> </div>
+     </div> 
 </div>
 		
 <footer class="end">
@@ -142,9 +147,8 @@
 				<span class= "linkedin">
 					<i class="fa-brands fa-linkedin"></i>
 				</span>
-		</a>
+			</a>
 		</footer>
-	<script src="src\script.js">
-	</script>
+	<script src="src\script.js"></script>
 </body>	
 </html>
