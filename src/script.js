@@ -24,7 +24,8 @@ function formatDate(date) {
   return `${day}, ${hours}:${min}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("forecast");
 
   let forecastHTML = `<div class="row>`;
@@ -62,13 +63,12 @@ document.querySelector("#nowDated").innerHTML = formatDate(currentTime);
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
+  let apiKey = "2718952144ed077c12e7c160fb6fc351";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function cityConditions(response) {
-  console.log(response.data);
-
   let cityElement = document.querySelector("#cityHeadline");
   cityElement.innerHTML = response.data.name;
 
@@ -100,7 +100,7 @@ function cityConditions(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
+  let apiKey = "2718952144ed077c12e7c160fb6fc351";
   let apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiWeatherURL).then(cityConditions);
@@ -109,7 +109,7 @@ function pinLocation(response) {
   let latitude = response.coords.latitude;
   let longitude = response.coords.longitude;
 
-  let apiKey = "c2b924a522e7431434cbf7706f4b901f";
+  let apiKey = "2718952144ed077c12e7c160fb6fc351";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
 
   axios.get(apiURL).then(cityConditions);
@@ -164,4 +164,3 @@ let currentButton = document.querySelector("#pinLocations");
 currentButton.addEventListener("click", currentGeo);
 
 searchCity("Charlotte");
-displayForecast();
