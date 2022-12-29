@@ -54,6 +54,7 @@ h1 {
   border-color: #8a8635;
   background-color: transparent;
   border-radius: 5px;
+  align-content: center;
 }
 
 #buttonSearch:after {
@@ -66,9 +67,10 @@ h1 {
   z-index: -1;
   transition: all 0.35s;
   border-radius: inherit;
+  align-content: center;
 }
 
-#button:hover:after {
+#buttonSearch:hover:after {
   margin: 2.5px;
   border-radius: 20px;
   border-color: #8a8635;
@@ -77,7 +79,13 @@ h1 {
   align-content: center;
 }
 
-#searching #weatherIcon {
+#searching {
+  margin: 2.5px;
+  color: #350b40;
+  align-content: center;
+}
+
+#weatherIcon {
   margin: 2.5px;
   color: #350b40;
   align-content: center;
