@@ -40,7 +40,7 @@ h1 {
   align-content: center;
 }
 
-#searching :active {
+#searching:hover:after {
   border-color: #8a8635;
   text-decoration-color: #350b40;
 }
