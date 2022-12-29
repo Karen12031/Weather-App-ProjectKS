@@ -2,22 +2,34 @@ body {
   font-family: "Zen Old Mincho", ui-rounded;
   margin: 40px;
   padding: 15px;
-  background: linear-gradient(
-    132deg,
-    rgb(249, 202, 120) 0%,
-    rgb(212, 206, 169) 50%,
-    rgb(172, 192, 191) 100%
-  );
 }
 
-body {
-  background-color: linear-gradient(
-    132deg,
-    rgb(157, 153, 64) 45%,
-    rgb(157, 151, 71) 30%,
-    rgb(220, 102, 36) 20%,
-    rgba(233, 201, 145, 0.925) 100%
-  );
+.bg-image {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/686/original/jason-leung-wHddViTmSvA-unsplash.jpg?1672347774);
+
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+  background-color: azure;
+  color: #350b40;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
 }
 
 #city {
