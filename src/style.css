@@ -163,6 +163,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
+  color: antiquewhite;
 }
 
 a.open:link {
@@ -170,15 +171,18 @@ a.open:link {
   color: #350b40;
 }
 
-a.open:visted {
+a.open:visited,
+a.linkedin:visited {
   text-decoration: none;
   color: #861da1;
 }
-a.open:hover {
+a.open:hover,
+a.linkedin:hover {
   text-decoration: none;
-  color: #97670e;
+  color: #ffca02;
 }
-a.open:active {
+a.open:active,
+a.linkedin:active {
   text-decoration: none;
   color: #350b40;
 }
