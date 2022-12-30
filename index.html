@@ -50,44 +50,37 @@
 					</div>
 			 </form>
 		<div class="WeatherInfo"> 
+		<div class="row">
+			<div class="col-12">
 			<h1 id="city">
 				<span id="pinbeat">
 				<i class="fa-solid fa-location-dot fa-xs fa-fw fa-beat" style="--fa-animation-duration: 2s;"></i></span>
 				<span id="cityHeadline">Have a great day </span> 
-			</h1>
-			<ul>
-				<li>
-					<span id = "weatherIcon" style="padding: 5px;">
-						<i class="fa-regular fa-clock fa-md"></i>
+			<div class="row" id="weatherItems">
+			<span id = "weatherIcon" style="padding: 5px;">
+						<i class="fa-regular fa-xs fa-clock"></i>
 					</span>
 					<span id = "nowDated">
 						Last Updated <strong>Saturday - 10:15 AM</strong>
 					</span>
-				</li>
-				<li>
-					<span id="description" class="float-left">
+					~
+					<span id="description">
 						Sunny
 					</span>
-				</li>
-				
-			</ul>	
-				<div class="row">
-					<div class="col-6">
-					  <div class="clearfix weather-temperature">
-							<div id="mainWeather">
-								<img
-								src="" 
-								id="mainIcon" 
-								class="float-left"
-								style="padding: 0.5em;"
-								/>
-							</div>
-						<div class="float-left">
-						 <span class="temperature" id="temperature">75</span>°F
-						</div>
-					  </div>
-					</div>
 				</div>
+				</h1>
+		</div>
+		
+	</div>
+		<div class="row">
+			<ul>
+				<li>
+					
+				</li>
+			</ul>
+		
+		</div>
+		<div class="row">
 			<div class="col-6">
 				<ul>
 					<li>
@@ -120,9 +113,22 @@
 						mph
 					</li>
 				</ul>
-			</div>
 		</div>
-		   
+		<div class="col-6">
+					  <div class="temperature-container d-flex justify-content-end">
+							<div id="mainWeather">
+								<img
+								src="" 
+								id="mainIcon" 
+								class="float-left"
+								style="padding: 0.5em;"
+								/>
+							</div>
+						 <span class="temperature" id="temperature">75</span>°F
+					  </div>
+					</div>
+				</div>
+			</div>	   
 	<h3>
 		5 Day Forecast
 	</h3>
