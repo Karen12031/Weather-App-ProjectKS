@@ -157,15 +157,23 @@ footer {
   text-decoration: wavy;
 }
 
-.open:link {
+a.open:link {
   text-decoration: none;
   color: #350b40;
 }
 
-.open:visited {
+a.open:visted {
   text-decoration: none;
+  color: #861da1;
 }
-
+a.open:hover {
+  text-decoration: none;
+  color: #97670e;
+}
+a.open:active {
+  text-decoration: none;
+  color: #350b40;
+}
 ul {
   text-align: start;
   padding: 1px;
