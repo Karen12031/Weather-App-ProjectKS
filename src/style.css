@@ -156,6 +156,14 @@ footer {
 .end {
   text-decoration: wavy;
 }
+a {
+  color: #350b40;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
 
 a.open:link {
   text-decoration: none;
