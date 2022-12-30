@@ -5,6 +5,10 @@ body {
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/686/original/jason-leung-wHddViTmSvA-unsplash.jpg?1672347774);
 }
 
+h1 {
+  margin: 0px;
+}
+
 .bg-image {
   backdrop-filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -27,26 +31,31 @@ body {
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 50%;
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
 }
 
 #city {
-  text-align: left;
-  padding-bottom: 10px;
-  font-size: 45px;
+  text-align: center;
+  padding: 18px;
+  margin: 1px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 28px;
   font-family: "Zen Old Mincho Black", ui-rounded;
 }
 #cityHeadline {
   color: #350b40;
-  margin: 1em;
   padding: 10% 0;
 }
 
+#weatherItems {
+  font-size: 15px;
+  text-align: center;
+  margin-left: 100px;
+}
+
 #pinbeat {
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 10px;
   color: #8a8635;
 }
 
@@ -114,14 +123,19 @@ body {
 }
 
 #weatherIcon {
-  margin: 2.5px;
+  margin-left: 2.5px;
   color: #350b40;
 }
 
 .temperature {
   color: #350b40;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bolder;
+}
+
+.all-descriptions {
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 h3 {
@@ -131,40 +145,52 @@ h3 {
   font-family: "Zen Old Mincho Black", ui-rounded;
   padding: 10px;
 }
-.end {
+
+footer {
   text-align: center;
+  background-color: #8a8635;
+  font-family: "Zen Old Mincho Black", ui-rounded;
+  font-weight: bold;
+  color: #350b40;
+}
+.end {
   text-decoration: wavy;
 }
 
-.open {
-  color: rgb(119, 119, 119);
+.open:link {
+  text-decoration: none;
+  color: #350b40;
 }
 
-.connection {
-  text-align: center;
-  font-family: "Zen Old Mincho Black", ui-rounded;
-  font-weight: bold;
-  color: #8a8635;
+.open:visited {
+  text-decoration: none;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  text-align: start;
+  padding: 1px;
+  margin: 1px;
 }
 
 li {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 6px;
+  text-align: start;
 
   color: #97670e;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bolder;
-  line-height: 19px;
+  line-height: 10px;
 }
 
 li:first-letter {
   text-transform: capitalize;
+}
+
+.WeatherInfo {
+  line-height: normal;
+  align-content: start;
 }
 
 .weather-app-wrapper {
